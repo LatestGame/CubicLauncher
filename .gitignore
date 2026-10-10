@@ -2,3 +2,4 @@ node_modules/
 dist/
 *.part
 src/main/builtin.json
+src/renderer/fonts/

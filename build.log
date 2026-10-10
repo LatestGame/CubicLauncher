@@ -1,26 +1,6 @@
 
 > cubic-launcher@0.1.0 dist
-> electron-builder
+> node scripts/copy-font.js && electron-builder
 
-  • electron-builder  version=25.1.8 os=10.0.26300
-  • loaded configuration  file=package.json ("build" field)
-  • author is missed in the package.json  appPackageFile=C:\Users\Galymzhan\Documents\CubicLauncher\package.json
-  • executing @electron/rebuild  electronVersion=33.4.11 arch=x64 buildFromSource=false appDir=./
-  • installing native dependencies  arch=x64
-  • completed installing native dependencies
-  • packaging       platform=win32 arch=x64 electron=33.4.11 appOutDir=dist\win-unpacked
-  • updating asar integrity executable resource  executablePath=dist\win-unpacked\CubicLauncher.exe
-  • building        target=nsis file=dist\CubicLauncher-Setup-0.1.0.exe archs=x64 oneClick=false perMachine=false
-  • default Electron icon is used  reason=application icon is not set
-  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/nsis-3.0.4.1/nsis-3.0.4.1.7z size=1.3 MB parts=1
-  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/nsis-3.0.4.1/nsis-3.0.4.1.7z duration=1.523s
-  • downloading     url=https://github.com/electron-userland/electron-builder-binaries/releases/download/nsis-resources-3.4.1/nsis-resources-3.4.1.7z size=731 kB parts=1
-  • downloaded      url=https://github.com/electron-userland/electron-builder-binaries/releases/download/nsis-resources-3.4.1/nsis-resources-3.4.1.7z duration=1.337s
-  • signing with signtool.exe  path=dist\__uninstaller-nsis-cubic-launcher.exe
-  • no signing info identified, signing is skipped  signHook=false cscInfo=null
-  • signing with signtool.exe  path=dist\CubicLauncher-Setup-0.1.0.exe
-  • no signing info identified, signing is skipped  signHook=false cscInfo=null
-  • building block map  blockMapFile=dist\CubicLauncher-Setup-0.1.0.exe.blockmap
-  • building        target=portable file=dist\CubicLauncher-Portable-0.1.0.exe archs=x64
-  • signing with signtool.exe  path=dist\CubicLauncher-Portable-0.1.0.exe
-  • no signing info identified, signing is skipped  signHook=false cscInfo=null
+Шрифт Inter: скопировано файлов — 4
+^C^C

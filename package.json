@@ -6,13 +6,14 @@
   "main": "src/main/main.js",
   "private": true,
   "scripts": {
-    "start": "electron .",
+    "start": "node scripts/copy-font.js && electron .",
     "test": "node test/run.js && node test/ui-smoke.js",
-    "dist": "electron-builder"
+    "dist": "node scripts/copy-font.js && electron-builder"
   },
   "devDependencies": {
     "electron": "^33.2.0",
-    "electron-builder": "^25.1.8"
+    "electron-builder": "^25.1.8",
+    "@fontsource-variable/inter": "^5.1.0"
   },
   "build": {
     "appId": "local.cubic.launcher",
