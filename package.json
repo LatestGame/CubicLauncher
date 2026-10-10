@@ -1,0 +1,59 @@
+{
+  "name": "cubic-launcher",
+  "productName": "CubicLauncher",
+  "version": "0.1.0",
+  "description": "Лёгкий лаунчер Minecraft без рекламы и телеметрии: моды из Modrinth и CurseForge",
+  "main": "src/main/main.js",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "test": "node test/run.js && node test/ui-smoke.js",
+    "dist": "electron-builder"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "local.cubic.launcher",
+    "productName": "CubicLauncher",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "artifactName": "CubicLauncher-Setup-${version}.${ext}"
+    },
+    "portable": {
+      "artifactName": "CubicLauncher-Portable-${version}.${ext}"
+    },
+    "linux": {
+      "target": "AppImage"
+    },
+    "mac": {
+      "target": "dmg"
+    }
+  }
+}
