@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 $ver  = '33.2.0'
 $root = Split-Path -Parent $MyInvocation.MyCommand.Path
-$out  = Join-Path $root 'dist-portable\CubicLauncher'
+$out  = Join-Path $root 'dist-portable\ShiftLauncher'
 $tmp  = Join-Path $env:TEMP "cubic-electron-$ver"
 $name = "electron-v$ver-win32-x64.zip"
 $base = "https://github.com/electron/electron/releases/download/v$ver"
@@ -9,7 +9,7 @@ $zip  = Join-Path $tmp $name
 $ProgressPreference = 'SilentlyContinue'
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-Write-Host "=== Сборка портативного CubicLauncher (Electron $ver) ==="
+Write-Host "=== Сборка портативного Shift Launcher (Electron $ver) ==="
 New-Item -ItemType Directory -Force $tmp | Out-Null
 
 if (-not (Test-Path $zip)) {
@@ -43,16 +43,16 @@ $min = [ordered]@{ name = $pkg.name; productName = $pkg.productName; version = $
 [IO.File]::WriteAllText((Join-Path $app 'package.json'), ($min | ConvertTo-Json), (New-Object Text.UTF8Encoding $false))
 
 Remove-Item (Join-Path $out 'resources\default_app.asar') -Force -ErrorAction SilentlyContinue
-Rename-Item (Join-Path $out 'electron.exe') 'CubicLauncher.exe'
+Rename-Item (Join-Path $out 'electron.exe') 'ShiftLauncher.exe'
 
 $readme = @"
-CubicLauncher - портативная версия для Windows 10/11 (x64).
-Запустите CubicLauncher.exe. Данные (сборки, моды, миры) хранятся в %APPDATA%\CubicLauncher,
+Shift Launcher - портативная версия для Windows 10/11 (x64).
+Запустите ShiftLauncher.exe. Данные (сборки, моды, миры) хранятся в %APPDATA%\ShiftLauncher,
 поэтому папку с программой можно переносить и удалять без потери сборок.
 Windows может показать предупреждение SmartScreen: файл не подписан. Нажмите "Подробнее" - "Всё равно запустить".
 "@
 Set-Content (Join-Path $out 'README.txt') $readme -Encoding UTF8
 
 Write-Host ''
-Write-Host "Готово: $out\CubicLauncher.exe"
+Write-Host "Готово: $out\ShiftLauncher.exe"
 Start-Process explorer.exe $out

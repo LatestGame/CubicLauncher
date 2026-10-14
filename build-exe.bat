@@ -1,7 +1,7 @@
 @echo off
 cd /d "%~dp0"
 set CSC_IDENTITY_AUTO_DISCOVERY=false
-echo === Building CubicLauncher for Windows ===
+echo === Building Shift Launcher for Windows ===
 where node >nul 2>nul
 if errorlevel 1 goto :nonode
 call npm install
@@ -21,7 +21,7 @@ set RC=%errorlevel%
 type build.log
 if not "%RC%"=="0" goto :fail
 echo.
-echo DONE. See the dist folder: CubicLauncher-Setup-*.exe and CubicLauncher-Portable-*.exe
+echo DONE. See the dist folder: ShiftLauncher-Setup-*.exe and ShiftLauncher-Portable-*.exe
 explorer dist
 pause
 exit /b 0

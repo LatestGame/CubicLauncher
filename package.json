@@ -1,6 +1,6 @@
 {
-  "name": "cubic-launcher",
-  "productName": "CubicLauncher",
+  "name": "shift-launcher",
+  "productName": "Shift Launcher",
   "version": "0.1.0",
   "description": "Лёгкий лаунчер Minecraft без рекламы и телеметрии: моды из Modrinth и CurseForge",
   "main": "src/main/main.js",
@@ -17,7 +17,7 @@
   },
   "build": {
     "appId": "local.cubic.launcher",
-    "productName": "CubicLauncher",
+    "productName": "Shift Launcher",
     "directories": {
       "output": "dist"
     },
@@ -45,10 +45,10 @@
     "nsis": {
       "oneClick": false,
       "allowToChangeInstallationDirectory": true,
-      "artifactName": "CubicLauncher-Setup-${version}.${ext}"
+      "artifactName": "ShiftLauncher-Setup-${version}.${ext}"
     },
     "portable": {
-      "artifactName": "CubicLauncher-Portable-${version}.${ext}"
+      "artifactName": "ShiftLauncher-Portable-${version}.${ext}"
     },
     "linux": {
       "target": "AppImage"
